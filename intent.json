@@ -1,0 +1,148 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "health assessment",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": []
+        },
+        {
+          "name": "NumberIntent",
+          "samples": [
+            "the number is {number}",
+            "{number}",
+            "it's {number}"
+          ],
+          "slots": [
+            {
+              "name": "number",
+              "type": "AMAZON.NUMBER"
+            }
+          ]
+        },
+        {
+          "name": "StartAssessmentIntent",
+          "slots": [],
+          "samples": [
+            "start assessment",
+            "begin assessment",
+            "let's start",
+            "start health check",
+            "check my health",
+            "assess my health",
+            "start medical assessment"
+          ]
+        },
+        {
+          "name": "UnsureIntent",
+          "slots": [],
+          "samples": [
+            "unsure",
+            "I'm not sure",
+            "don't know",
+            "I don't know",
+            "not certain",
+            "maybe",
+            "uncertain",
+            "not sure"
+          ]
+        },
+        {
+          "name": "TextAnswerIntent",
+          "slots": [
+            {
+              "name": "answer",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "my answer is {answer}",
+            "it's {answer}",
+            "I have {answer}",
+            "I take {answer}",
+            "I use {answer}",
+            "the answer is {answer}"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "TextAnswerIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "answer",
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.TextAnswerIntent.answer"
+              }
+            }
+          ]
+        },
+        {
+          "name": "NumberIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "number",
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.NumberIntent.number"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.TextAnswerIntent.answer",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please provide your answer."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.NumberIntent.number",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please provide a number."
+          }
+        ]
+      }
+    ]
+  }
+}
