@@ -71,12 +71,11 @@
 
 
     "Do you require help from others, including family or caretakers, to complete daily tasks?": {
-        "Yes": {
-            "Are you able to complete tasks such as bathing, using the bathroom, and eating on your own?": {
-                "Yes": "Do you have high blood pressure?",
-                "No": "Do you have high blood pressure?"
-            }
-        },
+        "Yes": "Are you able to complete tasks such as bathing, using the bathroom, and eating on your own?",
+        "No": "Do you have high blood pressure?"
+    },
+    "Are you able to complete tasks such as bathing, using the bathroom, and eating on your own?": {
+        "Yes": "Do you have high blood pressure?",
         "No": "Do you have high blood pressure?"
     },
 
@@ -103,38 +102,34 @@
 
 
     "Have you ever had a blood clot, stroke, or transient ischemic attack?": {
-        "Yes": {
-            "Was it in the last year?": {
-                "Yes": {
-                    "Was surgical intervention, such as thrombectomy, required?": {
-                        "Yes": "Do you have any long term complications such as weakness or speech problems?",
-                        "No": "Do you have any long term complications such as weakness or speech problems?"
-                    }
-                },
-                "No": "Do you have any long term complications such as weakness or speech problems?"
-            }
-        },
+        "Yes": "Was it in the last year?",
         "No": "Are you currently on blood thinners, such as aspirin, coumadin, plavix?"
     },
+    "Was it in the last year?": {
+        "Yes": "Was surgical intervention, such as thrombectomy, required?",
+        "No": "Do you have any long term complications such as weakness or speech problems?"
+    },
+    "Was surgical intervention, such as thrombectomy, required?": {
+        "Yes": "Do you have any long term complications such as weakness or speech problems?",
+        "No": "Do you have any long term complications such as weakness or speech problems?"
+    },
     "Do you have any long term complications such as weakness or speech problems?": {
-        "Yes": {
-            "Describe your weakness": {
-                "type": "text",
-                "next": "Are you currently on blood thinners, such as aspirin, coumadin, plavix?"
-            }
-        },
+        "Yes": "Describe your weakness",
         "No": "Are you currently on blood thinners, such as aspirin, coumadin, plavix?"
+    },
+    "Describe your weakness": {
+        "type": "text",
+        "next": "Are you currently on blood thinners, such as aspirin, coumadin, plavix?"
     },
 
    
     "Are you currently on blood thinners, such as aspirin, coumadin, plavix?": {
-        "Yes": {
-            "Which medications and which doses?": {
-                "type": "text",
-                "next": "Have you ever experienced excessive bleeding or bruising from these medications?"
-            }
-        },
+        "Yes": "Which medications and which doses?",
         "No": "Have you ever been diagnosed with a bleeding disorder?"
+    },
+    "Which medications and which doses?": {
+        "type": "text",
+        "next": "Have you ever experienced excessive bleeding or bruising from these medications?"
     },
     "Have you ever experienced excessive bleeding or bruising from these medications?": {
         "Yes": "Have you ever been diagnosed with a bleeding disorder?",
@@ -143,24 +138,22 @@
 
    
     "Have you ever been diagnosed with a bleeding disorder?": {
-        "Yes": {
-            "Which disorder?": {
-                "type": "text",
-                "next": "Have you ever had a heart attack or angina?"
-            }
-        },
+        "Yes": "Which disorder?",
         "No": "Have you ever had a heart attack or angina?"
+    },
+    "Which disorder?": {
+        "type": "text",
+        "next": "Have you ever had a heart attack or angina?"
     },
 
     
     "Have you ever had a heart attack or angina?": {
-        "Yes": {
-            "Do you have a stent?": {
-                "Yes": "Do you have a graft?",
-                "No": "Do you have a graft?"
-            }
-        },
+        "Yes": "Do you have a stent?",
         "No": "Have you ever been diagnosed with congestive heart failure?"
+    },
+    "Do you have a stent?": {
+        "Yes": "Do you have a graft?",
+        "No": "Do you have a graft?"
     },
     "Do you have a graft?": {
         "Yes": "Do you have a pacemaker?",
@@ -179,13 +172,12 @@
 
    
     "Do you have diabetes?": {
-        "Yes": {
-            "What was your last A1c?": {
-                "type": "text",
-                "next": "Do you require insulin at home?"
-            }
-        },
+        "Yes": "What was your last A1c?",
         "No": "Do you have a history of motion sickness or post-operative nausea and vomiting?"
+    },
+    "What was your last A1c?": {
+        "type": "text",
+        "next": "Do you require insulin at home?"
     },
     "Do you require insulin at home?": {
         "Yes": "Do you have a history of motion sickness or post-operative nausea and vomiting?",
@@ -194,76 +186,68 @@
 
    
     "Do you have a history of motion sickness or post-operative nausea and vomiting?": {
-        "Yes": {
-            "Have you ever required postoperative opioids?": {
-                "Yes": "Do you have kidney disease?",
-                "No": "Do you have kidney disease?"
-            }
-        },
+        "Yes": "Have you ever required postoperative opioids?",
+        "No": "Do you have kidney disease?"
+    },
+    "Have you ever required postoperative opioids?": {
+        "Yes": "Do you have kidney disease?",
         "No": "Do you have kidney disease?"
     },
 
    
     "Do you have kidney disease?": {
-        "Yes": {
-            "Is it dialysis dependent?": {
-                "Yes": {
-                    "How many times per week are you undergoing dialysis": {
-                        "type": "text",
-                        "next": "Are you on any medications to manage your kidney disease?"
-                    }
-                },
-                "No": "Are you on any medications to manage your kidney disease?"
-            }
-        },
+        "Yes": "Is it dialysis dependent?",
         "No": "Are you pregnant or is there a chance of you being pregnant?"
     },
+    "Is it dialysis dependent?": {
+        "Yes": "How many times per week are you undergoing dialysis",
+        "No": "Are you on any medications to manage your kidney disease?"
+    },
+    "How many times per week are you undergoing dialysis": {
+        "type": "text",
+        "next": "Are you on any medications to manage your kidney disease?"
+    },
     "Are you on any medications to manage your kidney disease?": {
-        "Yes": {
-            "Which medications?": {
-                "type": "text",
-                "next": "Are you pregnant or is there a chance of you being pregnant?"
-            }
-        },
+        "Yes": "Which medications?",
         "No": "Are you pregnant or is there a chance of you being pregnant?"
+    },
+    "Which medications?": {
+        "type": "text",
+        "next": "Are you pregnant or is there a chance of you being pregnant?"
     },
 
   
     "Are you pregnant or is there a chance of you being pregnant?": {
-        "Yes": {
-            "Have you taken a pregnancy test as confirmation?": {
-                "Yes": {
-                    "How far along are you in your pregnancy?": {
-                        "type": "text",
-                        "next": "Do you currently smoke cigarettes?"
-                    }
-                },
-                "No": "Do you currently smoke cigarettes?"
-            }
-        },
+        "Yes": "Have you taken a pregnancy test as confirmation?",
         "No": "Do you currently smoke cigarettes?"
+    },
+    "Have you taken a pregnancy test as confirmation?": {
+        "Yes": "How far along are you in your pregnancy?",
+        "No": "Do you currently smoke cigarettes?"
+    },
+    "How far along are you in your pregnancy?": {
+        "type": "text",
+        "next": "Do you currently smoke cigarettes?"
     },
 
    
     "Do you currently smoke cigarettes?": {
-        "Yes": {
-            "How many cigarettes per day?": {
-                "type": "text",
-                "next": "Do you have COPD, asthma, or emphysema?"
-            }
-        },
+        "Yes": "How many cigarettes per day?",
         "No": "Do you have COPD, asthma, or emphysema?"
+    },
+    "How many cigarettes per day?": {
+        "type": "text",
+        "next": "Do you have COPD, asthma, or emphysema?"
     },
 
    
     "Do you have COPD, asthma, or emphysema?": {
-        "Yes": {
-            "Do you use daily inhaler?": {
-                "Yes": "Do you have an active cough, wheezing, or shortness of breath?",
-                "No": "Do you have an active cough, wheezing, or shortness of breath?"
-            }
-        },
+        "Yes": "Do you use daily inhaler?",
         "No": "Have you had a respiratory infection in the last month that required antibiotic use?"
+    },
+    "Do you use daily inhaler?": {
+        "Yes": "Do you have an active cough, wheezing, or shortness of breath?",
+        "No": "Do you have an active cough, wheezing, or shortness of breath?"
     },
     "Do you have an active cough, wheezing, or shortness of breath?": {
         "Yes": "Have you had a respiratory infection in the last month that required antibiotic use?",
@@ -284,13 +268,12 @@
 
     
     "Do you currently drink alcohol?": {
-        "Yes": {
-            "How many drinks do you drink per week?": {
-                "type": "text",
-                "next": "How long was your last drink?"
-            }
-        },
+        "Yes": "How many drinks do you drink per week?",
         "No": "Do you use recreational drugs?"
+    },
+    "How many drinks do you drink per week?": {
+        "type": "text",
+        "next": "How long was your last drink?"
     },
     "How long was your last drink?": {
         "type": "text",
@@ -299,26 +282,23 @@
 
    
     "Do you use recreational drugs?": {
-        "Yes": {
-            "Do you use opioids, such as morphine, dilaudid, or heroin, on a regular basis?": {
-                "Yes": {
-                    "Have you ever required post-operative opioids?": {
-                        "Yes": "Are you going to have intraperitoneal, intrathoracic, or suprainguinal surgery?",
-                        "No": "Do you use IV drugs?"
-                    }
-                },
-                "No": "Do you use IV drugs?"
-            }
-        },
+        "Yes": "Do you use opioids, such as morphine, dilaudid, or heroin, on a regular basis?",
         "No": "Are you going to have intraperitoneal, intrathoracic, or suprainguinal surgery?"
     },
+    "Do you use opioids, such as morphine, dilaudid, or heroin, on a regular basis?": {
+        "Yes": "Have you ever required post-operative opioids?",
+        "No": "Do you use IV drugs?"
+    },
+    "Have you ever required post-operative opioids?": {
+        "Yes": "Are you going to have intraperitoneal, intrathoracic, or suprainguinal surgery?",
+        "No": "Do you use IV drugs?"
+    },
     "Do you use IV drugs?": {
-        "Yes": {
-            "Have you ever had an infection related to IV drug use?": {
-                "Yes": "Are you going to have intraperitoneal, intrathoracic, or suprainguinal surgery?",
-                "No": "Are you going to have intraperitoneal, intrathoracic, or suprainguinal surgery?"
-            }
-        },
+        "Yes": "Have you ever had an infection related to IV drug use?",
+        "No": "Are you going to have intraperitoneal, intrathoracic, or suprainguinal surgery?"
+    },
+    "Have you ever had an infection related to IV drug use?": {
+        "Yes": "Are you going to have intraperitoneal, intrathoracic, or suprainguinal surgery?",
         "No": "Are you going to have intraperitoneal, intrathoracic, or suprainguinal surgery?"
     },
 
@@ -332,12 +312,11 @@
         "No": "Is your age > 50?"
     },
     "Is your age > 50?": {
-        "Yes": {
-            "Is your age > 80?": {
-                "Yes": "Is your BMI > 35 kg/m2?",
-                "No": "Is your BMI > 35 kg/m2?"
-            }
-        },
+        "Yes": "Is your age > 80?",
+        "No": "Is your BMI > 35 kg/m2?"
+    },
+    "Is your age > 80?": {
+        "Yes": "Is your BMI > 35 kg/m2?",
         "No": "Is your BMI > 35 kg/m2?"
     },
     "Is your BMI > 35 kg/m2?": {
@@ -353,7 +332,15 @@
         "No": "What it an emergency surgery?"
     },
     "What it an emergency surgery?": {
-        "Yes": "END", 
-        "No": "END"  
+        "Yes": "Do you have any known allergies?",
+        "No": "Do you have any known allergies?"
+    },
+    "Do you have any known allergies?": {
+        "Yes": "Please describe your allergies",
+        "No": "END"
+    },
+    "Please describe your allergies": {
+        "type": "text",
+        "next": "END"
     }
 }
