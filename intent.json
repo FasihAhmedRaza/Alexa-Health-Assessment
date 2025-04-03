@@ -1,8 +1,12 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "health assessment",
+            "invocationName": "smart nurse",
             "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
                 {
                     "name": "AMAZON.CancelIntent",
                     "samples": []
@@ -16,19 +20,36 @@
                     "samples": []
                 },
                 {
-                    "name": "AMAZON.FallbackIntent",
+                    "name": "RestartIntent",
+                    "slots": [],
+                    "samples": [
+                        "start again",
+                        "begin again",
+                        "restart questionnaire",
+                        "start over"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
                     "samples": []
                 },
                 {
-                    "name": "AMAZON.YesIntent",
-                    "samples": []
+                    "name": "AnswerIntent",
+                    "slots": [
+                        {
+                            "name": "answer",
+                            "type": "ANSWER_TYPE"
+                        }
+                    ],
+                    "samples": [
+                        "my answer {answer}",
+                        "my answer is {answer}",
+                        "it is {answer}",
+                        "I say {answer}"
+                    ]
                 },
                 {
-                    "name": "AMAZON.NoIntent",
-                    "samples": []
-                },
-                {
-                    "name": "NumberIntent",
+                    "name": "NumberAnswerIntent",
                     "slots": [
                         {
                             "name": "number",
@@ -36,118 +57,45 @@
                         }
                     ],
                     "samples": [
-                        "the number is {number}",
-                        "{number}",
-                        "it's {number}"
+                        "my number is {number}",
+                        "it's {number}",
+                        "answer is {number}"
                     ]
                 },
                 {
-                    "name": "StartAssessmentIntent",
+                    "name": "StartQuestionnaireIntent",
                     "slots": [],
                     "samples": [
-                        "start assessment",
-                        "begin assessment",
-                        "let's start",
-                        "start health check",
-                        "check my health",
-                        "assess my health",
-                        "start medical assessment"
+                        "start",
+                        "start questionnaire",
+                        "begin questions",
+                        "start medical questions",
+                        "begin questionnaire"
                     ]
-                },
-                {
-                    "name": "UnsureIntent",
-                    "slots": [],
-                    "samples": [
-                        "unsure",
-                        "I'm not sure",
-                        "don't know",
-                        "I don't know",
-                        "not certain",
-                        "maybe",
-                        "uncertain",
-                        "not sure"
-                    ]
-                },
-                {
-                    "name": "TextAnswerIntent",
-                    "slots": [
-                        {
-                            "name": "answer",
-                            "type": "AMAZON.SearchQuery"
-                        }
-                    ],
-                    "samples": [
-                        "my answer is {answer}",
-                        "it's {answer}",
-                        "I have {answer}",
-                        "I take {answer}",
-                        "I use {answer}",
-                        "the answer is {answer}"
-                    ]
-                },
-                {
-                    "name": "AMAZON.NavigateHomeIntent",
-                    "samples": []
                 }
             ],
-            "types": []
-        },
-        "dialog": {
-            "intents": [
+            "types": [
                 {
-                    "name": "TextAnswerIntent",
-                    "confirmationRequired": false,
-                    "prompts": {},
-                    "slots": [
+                    "name": "ANSWER_TYPE",
+                    "values": [
                         {
-                            "name": "answer",
-                            "type": "AMAZON.SearchQuery",
-                            "confirmationRequired": false,
-                            "elicitationRequired": true,
-                            "prompts": {
-                                "elicitation": "Elicit.Slot.TextAnswerIntent.answer"
+                            "name": {
+                                "value": "yes"
                             }
-                        }
-                    ]
-                },
-                {
-                    "name": "NumberIntent",
-                    "confirmationRequired": false,
-                    "prompts": {},
-                    "slots": [
+                        },
                         {
-                            "name": "number",
-                            "type": "AMAZON.NUMBER",
-                            "confirmationRequired": false,
-                            "elicitationRequired": true,
-                            "prompts": {
-                                "elicitation": "Elicit.Slot.NumberIntent.number"
+                            "name": {
+                                "value": "no"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "unsure"
                             }
                         }
                     ]
                 }
-            ],
-            "delegationStrategy": "SKILL_RESPONSE"
-        },
-        "prompts": [
-            {
-                "id": "Elicit.Slot.TextAnswerIntent.answer",
-                "variations": [
-                    {
-                        "type": "PlainText",
-                        "value": "Please provide your answer."
-                    }
-                ]
-            },
-            {
-                "id": "Elicit.Slot.NumberIntent.number",
-                "variations": [
-                    {
-                        "type": "PlainText",
-                        "value": "Please provide a number."
-                    }
-                ]
-            }
-        ]
+            ]
+        }
     }
 }
